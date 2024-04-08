@@ -1,0 +1,4 @@
+**/*.yaml
+.gitlab/
+.next/
+public/
