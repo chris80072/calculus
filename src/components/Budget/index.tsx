@@ -47,14 +47,16 @@ const Budget: React.FC<Props> = () => {
   }
 
   return (
-    <div style={{ height: '600px' }}>
-      <Pie
-        data={data}
-        width={400}
-        height={400}
-        options={{ maintainAspectRatio: false, responsive: true }}
-      />
-      <>
+    <div>
+      <div style={{ height: '500px' }}>
+        <Pie
+          data={data}
+          width={400}
+          height={400}
+          options={{ maintainAspectRatio: false, responsive: true }}
+        />
+      </div>
+      <div style={{ marginTop: '20px' }}>
         {budgetTypes.map((budgetType, index) => (
           <InputGroup key={index} className="mb-3">
             <InputGroup.Text
@@ -78,7 +80,7 @@ const Budget: React.FC<Props> = () => {
             />
           </InputGroup>
         ))}
-      </>
+      </div>
     </div>
   )
 }
